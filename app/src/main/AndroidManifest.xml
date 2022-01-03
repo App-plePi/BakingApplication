@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BakinApplication">
         <activity
+            android:name=".ui.account.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.account.WelcomeActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.SplashActivity"
             android:exported="true" />
         <activity
