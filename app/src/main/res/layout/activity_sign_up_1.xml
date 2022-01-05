@@ -1,0 +1,180 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/object"
+    tools:context=".ui.account.SignUpActivity1">
+
+    <ImageButton
+        android:id="@+id/loginBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="65dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/robotomedium"
+        android:text="log in"
+        android:textColor="@color/primary"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/loginBackButton" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginBackButton"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:fontFamily="@font/robotomedium"
+            android:text="Sign Up"
+            android:textColor="@color/primary"
+            android:textSize="70sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/signUpWelcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanskrr"
+            android:includeFontPadding="false"
+            android:text="welcome to java"
+            android:textColor="#646464"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/loginTitle"
+            app:layout_constraintTop_toBottomOf="@id/loginTitle" />
+
+        <LinearLayout
+            android:id="@+id/loginBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/background_radius_26_white"
+            android:elevation="5dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/signUpWelcomeText"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="21dp"
+                android:fontFamily="@font/robotomedium"
+                android:text="nickname"
+                android:textColor="#bebebe"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="#6BBEBEBE"
+                android:fontFamily="@font/robotomedium"
+                android:hint="nickname"
+                android:inputType="textEmailAddress"
+                android:textColor="#3d3d3d"
+                android:textColorHint="#6BBEBEBE"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/notosanskrb"
+                android:includeFontPadding="false"
+                android:text="유효한 이메일을 입력해주세요"
+                android:textColor="#B95151"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/robotomedium"
+                android:text="phone"
+                android:textColor="#bebebe"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="#6BBEBEBE"
+                android:fontFamily="@font/robotomedium"
+                android:hint="01012345678"
+                android:inputType="number"
+                android:textColor="#3d3d3d"
+                android:textColorHint="#6BBEBEBE"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="55dp"
+                android:fontFamily="@font/notosanskrb"
+                android:includeFontPadding="false"
+                android:text="유효한 전화번호를 입력해주세요"
+                android:textColor="#B95151"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="68dp"
+            android:layout_marginRight="68dp"
+            android:background="@drawable/background_radius_40_primary"
+            android:elevation="5dp"
+            android:fontFamily="@font/robotobold"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="next"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@id/loginBox"
+            app:layout_constraintLeft_toLeftOf="@id/loginBox"
+            app:layout_constraintRight_toRightOf="@id/loginBox"
+            app:layout_constraintTop_toBottomOf="@id/loginBox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/loginBar"
+        android:layout_width="180dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/background_radius_20_primary"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
