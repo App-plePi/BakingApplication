@@ -1,209 +1,218 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/object"
-    tools:context=".ui.account.SignUpActivity2">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageButton
-        android:id="@+id/loginBackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="65dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="24dp"
-        android:fontFamily="@font/robotomedium"
-        android:text="log in"
-        android:textColor="@color/primary"
-        android:textSize="20sp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/loginBackButton" />
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.bakinapplication.viewmodel.SignUpViewModel2" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginBackButton"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_height="match_parent"
+        android:background="@color/object"
+        tools:context=".ui.account.SignUpActivity2">
 
-        <TextView
-            android:id="@+id/loginTitle"
+        <ImageButton
+            android:id="@+id/loginBackButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:fontFamily="@font/robotomedium"
-            android:text="Sign Up"
-            android:textColor="@color/primary"
-            android:textSize="70sp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="65dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/signUpWelcomeText"
+            android:id="@+id/signUp2LoginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/notosanskrr"
-            android:includeFontPadding="false"
-            android:text="welcome to java"
-            android:textColor="#646464"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/robotomedium"
+            android:text="log in"
+            android:textColor="@color/primary"
             android:textSize="20sp"
-            app:layout_constraintLeft_toLeftOf="@id/loginTitle"
-            app:layout_constraintTop_toBottomOf="@id/loginTitle" />
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/loginBackButton" />
 
-        <LinearLayout
-            android:id="@+id/loginBox"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="48dp"
-            android:layout_marginBottom="50dp"
-            android:background="@drawable/background_radius_26_white"
-            android:elevation="5dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/signUpWelcomeText"
+            android:layout_marginTop="65dp"
+            app:layout_constraintBottom_toTopOf="@id/signUp2Bar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginBackButton"
             app:layout_constraintVertical_bias="0.0">
 
             <TextView
+                android:id="@+id/signUp2Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="21dp"
+                android:layout_marginLeft="48dp"
                 android:fontFamily="@font/robotomedium"
-                android:text="confirm"
-                android:textColor="#bebebe"
-                android:textSize="25sp" />
+                android:text="Sign Up"
+                android:textColor="@color/primary"
+                android:textSize="70sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
+            <TextView
+                android:id="@+id/signUp2WelcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosanskrr"
+                android:includeFontPadding="false"
+                android:text="welcome to java"
+                android:textColor="#646464"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="@id/signUp2Title"
+                app:layout_constraintTop_toBottomOf="@id/signUp2Title" />
+
+            <LinearLayout
+                android:id="@+id/signUp2Box"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:backgroundTint="#6BBEBEBE"
-                android:fontFamily="@font/robotomedium"
-                android:hint="confirm number"
-                android:inputType="number"
-                android:textColor="#3d3d3d"
-                android:textColorHint="#6BBEBEBE"
-                android:textSize="20sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:fontFamily="@font/notosanskrb"
-                android:includeFontPadding="false"
-                android:text="인증번호를 입력해주세요"
-                android:textColor="#3d3d3d"
-                android:textSize="12sp" />
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/background_radius_26_white"
+                android:elevation="5dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/signUp2WelcomeText"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="confirm"
+                    android:textColor="#bebebe"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#6BBEBEBE"
+                    android:fontFamily="@font/robotomedium"
+                    android:hint="confirm number"
+                    android:text="@={viewModel.confirm}"
+                    android:inputType="number"
+                    android:textColor="#3d3d3d"
+                    android:textColorHint="#6BBEBEBE"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/notosanskrb"
+                    android:includeFontPadding="false"
+                    android:text="인증번호를 입력해주세요"
+                    android:textColor="#3d3d3d"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="password"
+                    android:textColor="#bebebe"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#6BBEBEBE"
+                    android:fontFamily="@font/robotomedium"
+                    android:hint="press your password"
+                    android:text="@={viewModel.password}"
+                    android:inputType="textPassword"
+                    android:textColor="#3d3d3d"
+                    android:textColorHint="#6BBEBEBE"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="Repeat password"
+                    android:textColor="#bebebe"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="#6BBEBEBE"
+                    android:fontFamily="@font/robotomedium"
+                    android:hint="repeat your password"
+                    android:text="@={viewModel.repeatPassword}"
+                    android:inputType="textPassword"
+                    android:textColor="#3d3d3d"
+                    android:textColorHint="#6BBEBEBE"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/signUp2RepeatPasswordWarning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="55dp"
+                    android:fontFamily="@font/notosanskrb"
+                    android:includeFontPadding="false"
+                    android:text="비밀번호가 일치하지 않습니다"
+                    android:textColor="#B95151"
+                    android:textSize="12sp"
+                    android:visibility="invisible"/>
+
+
+            </LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:fontFamily="@font/robotomedium"
-                android:text="password"
-                android:textColor="#bebebe"
-                android:textSize="25sp" />
-
-            <EditText
+                android:id="@+id/signUp2Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:backgroundTint="#6BBEBEBE"
-                android:fontFamily="@font/robotomedium"
-                android:hint="press your password"
-                android:inputType="textPassword"
-                android:textColor="#3d3d3d"
-                android:textColorHint="#6BBEBEBE"
-                android:textSize="20sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:fontFamily="@font/notosanskrb"
-                android:includeFontPadding="false"
-                android:text="비밀번호가 일치하지 않습니다"
-                android:textColor="#B95151"
-                android:textSize="12sp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:fontFamily="@font/robotomedium"
-                android:text="Repeat password"
-                android:textColor="#bebebe"
-                android:textSize="25sp" />
+                android:layout_marginLeft="68dp"
+                android:layout_marginRight="68dp"
+                android:background="@drawable/background_radius_40_primary"
+                android:elevation="5dp"
+                android:fontFamily="@font/robotobold"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="sign up"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="@id/signUp2Box"
+                app:layout_constraintLeft_toLeftOf="@id/signUp2Box"
+                app:layout_constraintRight_toRightOf="@id/signUp2Box"
+                app:layout_constraintTop_toBottomOf="@id/signUp2Box" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:backgroundTint="#6BBEBEBE"
-                android:fontFamily="@font/robotomedium"
-                android:hint="repeat your password"
-                android:inputType="textPassword"
-                android:textColor="#3d3d3d"
-                android:textColorHint="#6BBEBEBE"
-                android:textSize="20sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="55dp"
-                android:fontFamily="@font/notosanskrb"
-                android:includeFontPadding="false"
-                android:text="비밀번호가 일치하지 않습니다"
-                android:textColor="#B95151"
-                android:textSize="12sp" />
-
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/loginButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="68dp"
-            android:layout_marginRight="68dp"
-            android:background="@drawable/background_radius_40_primary"
-            android:elevation="5dp"
-            android:fontFamily="@font/robotobold"
-            android:gravity="center"
-            android:padding="15dp"
-            android:text="sign up"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="@id/loginBox"
-            app:layout_constraintLeft_toLeftOf="@id/loginBox"
-            app:layout_constraintRight_toRightOf="@id/loginBox"
-            app:layout_constraintTop_toBottomOf="@id/loginBox" />
+        <View
+            android:id="@+id/signUp2Bar"
+            android:layout_width="180dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/background_radius_20_primary"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <View
-        android:id="@+id/loginBar"
-        android:layout_width="180dp"
-        android:layout_height="5dp"
-        android:layout_gravity="center|bottom"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="18dp"
-        android:background="@drawable/background_radius_20_primary"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
