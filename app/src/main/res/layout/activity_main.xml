@@ -1,80 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.main.MainActivity"
-    android:background="#ececec">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/mainTitleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        android:text="Java"
-        android:textSize="30sp"
-        android:textColor="@color/primary"
-        android:fontFamily="@font/robotobold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.bakinapplication.viewmodel.MainViewModel" />
+    </data>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="46dp"
-        android:layout_height="46dp"
-        android:layout_marginRight="24dp"
-        android:background="@color/white"
-        app:cardCornerRadius="26dp"
-        app:layout_constraintTop_toTopOf="@id/mainTitleText"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/mainTitleText">
-        <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainActivity"
+        android:background="#ececec">
+
+        <TextView
+            android:id="@+id/mainTitleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/chef_cooking_restaurant_kitchen"/>
-    </androidx.cardview.widget.CardView>
-    <EditText
-        android:id="@+id/mainSearchEdit"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginLeft="24dp"
-        android:paddingLeft="80dp"
-        android:background="@drawable/background_radius_20_white"
-        android:hint="Do you have a recipe you want?"
-        android:textSize="15sp"
-        android:textColor="@color/black"
-        android:textColorHint="#66742424"
-        android:fontFamily="@font/robotobold"
-        android:includeFontPadding="false"
-        android:elevation="5dp"
-        app:layout_constraintTop_toBottomOf="@id/mainTitleText"
-        />
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="Java"
+            android:textSize="30sp"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/robotobold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        app:layout_constraintTop_toTopOf="@id/mainSearchEdit"
-        app:layout_constraintLeft_toLeftOf="@id/mainSearchEdit"
-        app:layout_constraintBottom_toBottomOf="@id/mainSearchEdit"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mainProfileCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:background="@color/white"
+            app:cardCornerRadius="26dp"
+            app:layout_constraintTop_toTopOf="@id/mainTitleText"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/mainTitleText">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/mainSearchEdit"
-        app:layout_constraintBottom_toTopOf="@id/mainBar"/>
+            <ImageView
+                android:id="@+id/mainProfileImage"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@color/white"
+                />
+        </androidx.cardview.widget.CardView>
 
-    <View
-        android:id="@+id/mainBar"
-        android:layout_width="180dp"
-        android:layout_height="5dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/background_radius_20_primary"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            app:cardCornerRadius="18dp"
+            app:layout_constraintTop_toTopOf="@id/mainProfileCard"
+            app:layout_constraintRight_toLeftOf="@id/mainProfileCard"
+            app:layout_constraintBottom_toBottomOf="@id/mainProfileCard">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/mainRecipeCreateButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="center"
+                android:background="@color/primary"
+                android:src="@drawable/ic_plus" />
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/mainSearchEdit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:paddingLeft="80dp"
+            android:background="@drawable/background_radius_20_white"
+            android:hint="Do you have a recipe you want?"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textColorHint="#66742424"
+            android:fontFamily="@font/robotobold"
+            android:includeFontPadding="false"
+            android:elevation="5dp"
+            app:layout_constraintTop_toBottomOf="@id/mainTitleText" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            app:layout_constraintTop_toTopOf="@id/mainSearchEdit"
+            app:layout_constraintLeft_toLeftOf="@id/mainSearchEdit"
+            app:layout_constraintBottom_toBottomOf="@id/mainSearchEdit" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mainRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/mainSearchEdit"
+            app:layout_constraintBottom_toTopOf="@id/mainBar" />
+
+        <View
+            android:id="@+id/mainBar"
+            android:layout_width="180dp"
+            android:layout_height="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_radius_20_primary"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
