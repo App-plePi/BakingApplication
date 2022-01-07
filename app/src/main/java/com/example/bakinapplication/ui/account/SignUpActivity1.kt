@@ -25,7 +25,9 @@ class SignUpActivity1 : AppCompatActivity() {
         binding.lifecycleOwner = this
 
         viewModel.nickname.observe(this){
-            viewModel.checkNickname()
+            if(viewModel.nickname.value!!.length in 4..7){
+                viewModel.checkNickname()
+            }
         }
         binding.signUpButton.setOnClickListener {
             if(viewModel.nickname.value!!.length < 3 || viewModel.nickname.value!!.length > 8|| viewModel.isCheck){

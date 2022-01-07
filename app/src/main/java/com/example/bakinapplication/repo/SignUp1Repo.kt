@@ -5,4 +5,5 @@ import com.example.bakinapplication.severdb.ServerBuilder
 
 class SignUp1Repo {
     suspend fun confirm(confirmModel: ConfirmModel) = ServerBuilder.serverApi.confirm(confirmModel)
+    suspend fun clickNickname(nickname: String?) = ServerBuilder.serverApi.checkNickname(nickname)
 }

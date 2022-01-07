@@ -115,7 +115,7 @@
                     android:layout_marginLeft="20dp"
                     android:fontFamily="@font/notosanskrb"
                     android:includeFontPadding="false"
-                    android:text="3~8자 닉네임"
+                    android:text="@{viewModel.nicknameWarning}"
                     android:textColor="#B95151"
                     android:textSize="12sp" />
 
