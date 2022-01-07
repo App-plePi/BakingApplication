@@ -30,5 +30,5 @@ interface ServerApi {
     suspend fun getMyRecipeList(@Path("userid")id:String):Response<ArrayList<RecipeListModel>>
 
     @GET("/user/exist/nickname/{nickname}")
-    suspend fun checkNickname(@Path("nickname")nickname:String):Response<CheckModel>
+    suspend fun checkNickname(@Path("nickname")nickname:String?):Response<CheckModel>
 }
