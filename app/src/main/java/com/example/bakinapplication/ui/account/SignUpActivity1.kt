@@ -30,7 +30,7 @@ class SignUpActivity1 : AppCompatActivity() {
             }
         }
         binding.signUpButton.setOnClickListener {
-            if(viewModel.nickname.value!!.length < 3 || viewModel.nickname.value!!.length > 8|| viewModel.isCheck){
+            if(viewModel.nickname.value!!.length < 3 || viewModel.nickname.value!!.length > 8|| !viewModel.isCheck){
                 Toast.makeText(this,"유효한 닉네임을 입력해주세요",Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
