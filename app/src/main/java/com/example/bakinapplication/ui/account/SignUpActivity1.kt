@@ -38,7 +38,6 @@ class SignUpActivity1 : AppCompatActivity() {
             val intent = Intent(this, SignUpActivity2::class.java)
             intent.putExtra("nickname", viewModel.nickname.value.toString())
             intent.putExtra("phone", viewModel.phone.value.toString())
-            ActivityCompat.finishAffinity(this)
             startActivity(intent)
         }
         binding.signUpBackButton.setOnClickListener {
