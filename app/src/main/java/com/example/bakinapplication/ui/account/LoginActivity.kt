@@ -41,5 +41,8 @@ class LoginActivity : AppCompatActivity() {
         binding.loginSignUpButton.setOnClickListener {
             startActivity(Intent(applicationContext,SignUpActivity1::class.java))
         }
+        binding.loginBackButton.setOnClickListener {
+            finish()
+        }
     }
 }
