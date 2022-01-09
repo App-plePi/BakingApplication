@@ -64,6 +64,10 @@ class RecipeCreateActivity : AppCompatActivity() {
         binding.recipeCreateIngredientRecycler.adapter = ingredientAdapter
 
 
+        binding.recipeCreateBackButton.setOnClickListener {
+            finish()
+        }
+
         binding.recipeCreateUploadButton.setOnClickListener {
             var contents = ""
             var ingredient = ""
