@@ -22,9 +22,6 @@ class WelcomeActivity : AppCompatActivity() {
         binding.welcomeSignUpButton.setOnClickListener {
             signUp()
         }
-        binding.welcomeFindPasswordButton.setOnClickListener {
-            findPassword()
-        }
     }
     private fun login() {
         startActivity(Intent(this, LoginActivity::class.java))
