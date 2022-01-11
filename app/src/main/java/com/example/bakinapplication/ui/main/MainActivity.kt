@@ -1,8 +1,10 @@
 package com.example.bakinapplication.ui.main
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.bakinapplication.R
@@ -30,10 +32,7 @@ class MainActivity : AppCompatActivity() {
         binding.mainRecipeCreateButton.setOnClickListener {
             startActivity(Intent(this, RecipeCreateActivity::class.java))
         }
-        binding.mainRecycler.adapter = adapter
-        CoroutineScope(Dispatchers.Main).launch {
-            adapter.addItem(viewModel.getList()!!)
-        }
+
         binding.mainProfileImage.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
         }
@@ -41,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        binding.mainRecycler.adapter = adapter
         adapter.removeAll()
         CoroutineScope(Dispatchers.Main).launch {
             adapter.addItem(viewModel.getList()!!)

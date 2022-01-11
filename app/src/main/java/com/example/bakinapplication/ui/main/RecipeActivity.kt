@@ -59,7 +59,7 @@ class RecipeActivity : AppCompatActivity() {
                     orderAdapter.addItem(RecipeOrderModel(imgList[i], contentList[i]))
                 }
             }
-            for(i in ingredientList.indices-1){
+            for(i in 0 until ingredientList.size-1){
                 ingredientAdapter.addItem(ingredientList[i])
             }
         }

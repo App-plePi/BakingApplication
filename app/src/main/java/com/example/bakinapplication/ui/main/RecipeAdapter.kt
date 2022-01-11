@@ -39,7 +39,9 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.ViewHolder>() {
         notifyDataSetChanged()
     }
     fun removeAll(){
+        Log.d(TAG, "onCreate: $list")
         list.clear()
         notifyDataSetChanged()
+        Log.d(TAG, "onCreate: Remove")
     }
 }
