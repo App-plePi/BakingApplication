@@ -64,7 +64,7 @@
                 android:id="@+id/loginWelcomeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="welcome to Java"
+                android:text="welcome to App:ple Pi"
                 android:textSize="20sp"
                 android:textColor="#bebebe"
                 android:fontFamily="@font/notosanskrr"
